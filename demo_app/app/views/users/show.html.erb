@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+<h3>Posts were written by "<%= @user.name %>":</h3>
+<table border=1>
+	<thead>
+		<tr>
+			<th>Content</th>
+			<th>Options</th>
+			</tr>
+	</thead>
+<tbody>
+	<% @microposts.each do |micropost| %>
+	<% if micropost.user_id == @user.id%>
+		<tr>
+			<td><%= micropost.content %></td>
+			<td><%= link_to 'Show', micropost %>|
+			<%= link_to 'Edit', edit_micropost_path(micropost) %>|
+			<%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+	<% end %>
+	<% end %>
+</tbody>
+</table>
