@@ -1,10 +1,11 @@
+<% provide(:title, "Contact") %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title><%= @title %></title>
+	<title><% yield(:title) %></title>
 </head>
 <body>
-	Contact Ruby on Rails Tutorial about the sample app at the <a style="text-decoration:none" href="http://railstutorial.org/feedback">feedback page</a>.
+<h1>Contact</h1>
+	<p>Contact Ruby on Rails Tutorial about the sample app at the <a style="text-decoration:none" href="http://railstutorial.org/feedback">feedback page</a>.</p>
 </body>
 </html>

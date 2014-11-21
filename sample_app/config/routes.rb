@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root 'pages#home'
+
   get 'about' => 'pages#about'
 
   get 'home' => 'pages#home'
@@ -7,7 +10,7 @@ Rails.application.routes.draw do
 
   get 'help' => 'pages#help'
 
-  root 'pages#home'
+  get 'signup' => 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
