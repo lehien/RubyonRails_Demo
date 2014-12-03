@@ -30,6 +30,12 @@ gem 'spring',        group: :development
 
 # Use bcrypt to secure password
 gem 'bcrypt', '3.1.9'
+# Use faker to make sample for test
+gem 'faker', '1.4.3'
+# Create Page
+gem 'will_paginate', '3.0.7'
+#
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
